@@ -70,7 +70,7 @@ public class  BookController {
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @GetMapping("/books/genre/{id}")
+    @GetMapping("/books/genres/{id}")
     public ResponseEntity<List<Book>> readByGenreId(@PathVariable Long id) {
         return new ResponseEntity<>(bookService.readByGenreId(id), HttpStatus.OK);
     }
